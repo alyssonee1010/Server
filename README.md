@@ -17,6 +17,9 @@ Now you can go in your browser to http:localhost:8080
 In a third terminal go to the folder slowloris with `cd slowloris` and now to start the attack run the command:
 `python3 slowloris.py localhost -p 8080 -s 100000 --sleeptime 2`
 
+-s: sockets, the more sockets more powerful the attack is.
+--sleeptime is in seconds how often the flood should be sent
+
 ## Requirements
 
 To be able to run this code you need to have Python and Node install in your machine
