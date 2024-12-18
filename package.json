@@ -4,7 +4,9 @@
   "main": "backend.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "attackServer": "cd slowloris & python slowloris.py 192.168.56.10 -p 8080 -s 1000000 --sleeptime 0",
+    "attackAttacker": "cd slowloris & python slowloris.py 192.168.56.11 -p 8080 -s 1000000 --sleeptime 0"
   },
   "keywords": [],
   "author": "",
