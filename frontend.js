@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-const TCP_SERVER_HOST = '127.0.0.1';
+const TCP_SERVER_HOST = '0.0.0.0';
 const TCP_SERVER_PORT = 8080;
 
 // Endpoint to test server response

@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const TCP_SERVER_HOST = '127.0.0.1';
+const TCP_SERVER_HOST = '0.0.0.0';
 const TCP_SERVER_PORT = 8080;
 
 // Test endpoint
@@ -28,7 +28,7 @@ app.post('/simulate', (req, res) => {
 
     client.setTimeout(10000);
 
-    client.connect(TCP_SERVER_PORT, TCP_SERVER_HOST, () => {
+    client.connect(TCP_SERVER_HOST, () => {
         client.write(payload);
     });
 
